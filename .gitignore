@@ -2,3 +2,4 @@
 db.sqlite3
 delivAdd/testmodel2
 delivAdd/testmodel3.py
+delivAdd/migrations/*

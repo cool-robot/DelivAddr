@@ -2,14 +2,14 @@
 
 from rest_framework import serializers
 
-from delivADD import Address
+from delivAdd.models import Address
 
 
 class AddressSerializer(serializers.ModelSerializer):
     """docstring for ClassName"""
     class Meta:
         model=Address
-        fields=('id','recipent_name','cellphone','province_name','city','street','postal_code','address_tag',)
+        fields=('recipent_name','cellphone','province','city','street','postal_code','address_tag')
 
 
 

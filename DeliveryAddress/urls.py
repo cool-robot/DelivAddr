@@ -16,6 +16,19 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from delivAdd.views import *
+from rest_framework.urlpatterns import format_suffix_patterns
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
+
+urlpatterns += [
+
+	url(r'^address/$',AddressList.as_view()),
+	url(r'address/(?P<pk>[0-9]+)/$',AddressDetail.as_view()),
+
+]
+
+urlpatterns = format_suffix_patterns(urlpatterns)

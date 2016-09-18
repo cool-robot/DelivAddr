@@ -7,11 +7,11 @@ from rest_framework import generics
 from django.contrib.auth.models import User
 
 
-class SnippetList(generics.ListCreateAPIView):
+class AddressList(generics.ListCreateAPIView):
     queryset = Address.objects.all()
     serializer_class = AddressSerializer
 
 
-class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
+class AddressDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Address.objects.all()
     serializer_class = AddressSerializer
